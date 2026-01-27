@@ -1,15 +1,50 @@
   "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-black pb-[100px] pt-32">
-      {/* Background Effect (Subtle glow behind text) */}
-      <div className="absolute left-1/2 top-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.03] blur-[120px]" />
+    <section className="relative flex min-h-[125vh] w-full flex-col justify-start overflow-hidden bg-black">
+      {/* Background Images */}
+      <div className="absolute inset-0 z-0">
+        {/* Desktop Image */}
+        <div className="hidden h-full w-full md:block">
+          <Image
+            src="/bg-hero-desktop.webp"
+            alt="Background Hero"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={90}
+          />
+        </div>
+        {/* Mobile Image */}
+        <div className="block h-full w-full md:hidden">
+          <Image
+            src="/bg-hero-mobile.webp"
+            alt="Background Hero"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={90}
+          />
+        </div>
 
-      <div className="container-diamond relative z-10 flex flex-col items-center text-center">
+        {/* Overlay with Fade Effect */}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,1) 100%)"
+          }}
+        />
+
+        {/* Blur Effect Overlay (Optional/Additional if needed per instructions, but gradient handles fade) */}
+        <div className="absolute inset-0 z-10 backdrop-blur-[2px]" />
+      </div>
+
+      <div className="container-diamond relative z-20 flex min-h-screen flex-col items-center justify-center pb-[100px] pt-32 text-center">
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

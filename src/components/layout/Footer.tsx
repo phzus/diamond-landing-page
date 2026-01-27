@@ -57,8 +57,7 @@ export function Footer() {
               />
             </Link>
             <p className="max-w-xs text-sm text-muted-foreground">
-              Soluções premium e inovadoras para impulsionar seu negócio.
-              Qualidade, excelência e resultados que brilham.
+              Poker Club com a atmosfera envolvente dos grandes cassinos internacionais.
             </p>
           </div>
 

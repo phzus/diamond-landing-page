@@ -7,7 +7,7 @@ export function Concept() {
   return (
     <section
       id="quem-somos"
-      className="bg-black py-[100px]"
+      className="relative z-20 -mt-32 py-0 lg:-mt-40"
     >
       <div className="container-diamond">
         <div className="flex flex-col-reverse lg:flex-row lg:items-center lg:gap-20 xl:gap-50">
