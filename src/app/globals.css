@@ -1,0 +1,265 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant light (&:is(.light *));
+
+/* ============================================
+   DIAMOND BRAND - Dark Minimal Design System
+   P&B (Preto & Branco) Invertido
+   ============================================ */
+
+@theme inline {
+  /* Font families - Directly referencing Next.js variables */
+  --font-helvetica: var(--font-helvetica), system-ui, sans-serif;
+  --font-distrample: var(--font-distrample), system-ui, sans-serif;
+
+  /* Color mappings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Chart colors */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar colors */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Border radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* ============================================
+   DARK MODE (Default - P&B Invertido)
+   Background: Preto | Foreground: Branco
+   ============================================ */
+:root {
+  --radius: 0.5rem;
+
+  /* Base colors - Dark by default */
+  --background: #000000;
+  --foreground: #ffffff;
+
+  /* Card */
+  --card: #0a0a0a;
+  --card-foreground: #ffffff;
+
+  /* Popover */
+  --popover: #0a0a0a;
+  --popover-foreground: #ffffff;
+
+  /* Primary - White */
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+
+  /* Secondary - Dark gray */
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ffffff;
+
+  /* Muted */
+  --muted: #1a1a1a;
+  --muted-foreground: #a0a0a0;
+
+  /* Accent - White */
+  --accent: #ffffff;
+  --accent-foreground: #000000;
+
+  /* Destructive */
+  --destructive: #ff3333;
+
+  /* Borders and inputs */
+  --border: #262626;
+  --input: #262626;
+  --ring: #ffffff;
+
+  /* Charts - Grayscale */
+  --chart-1: #ffffff;
+  --chart-2: #d4d4d4;
+  --chart-3: #a3a3a3;
+  --chart-4: #737373;
+  --chart-5: #525252;
+
+  /* Sidebar */
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ffffff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262626;
+  --sidebar-ring: #ffffff;
+}
+
+/* ============================================
+   LIGHT MODE (Optional)
+   Background: Branco | Foreground: Preto
+   ============================================ */
+.light {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #000000;
+
+  /* Card */
+  --card: #f5f5f5;
+  --card-foreground: #000000;
+
+  /* Popover */
+  --popover: #f5f5f5;
+  --popover-foreground: #000000;
+
+  /* Primary - Black */
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+
+  /* Secondary - Light gray */
+  --secondary: #e5e5e5;
+  --secondary-foreground: #000000;
+
+  /* Muted */
+  --muted: #e5e5e5;
+  --muted-foreground: #525252;
+
+  /* Accent - Black */
+  --accent: #000000;
+  --accent-foreground: #ffffff;
+
+  /* Destructive */
+  --destructive: #dc2626;
+
+  /* Borders and inputs */
+  --border: #d4d4d4;
+  --input: #d4d4d4;
+  --ring: #000000;
+
+  /* Charts - Grayscale */
+  --chart-1: #000000;
+  --chart-2: #262626;
+  --chart-3: #525252;
+  --chart-4: #737373;
+  --chart-5: #a3a3a3;
+
+  /* Sidebar */
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e5e5;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #d4d4d4;
+  --sidebar-ring: #000000;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-helvetica), system-ui, sans-serif;
+  }
+
+  /* Typography - Headings with Distrample */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-distrample), var(--font-helvetica), system-ui, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  /* Focus visible for accessibility */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-foreground/20 text-foreground;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+@layer utilities {
+  /* Glass effect */
+  .glass {
+    @apply bg-background/80 backdrop-blur-md;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  }
+
+  /* Container utility */
+  .container-diamond {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Swiper Linear Transition */
+  .linear-transition .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+}

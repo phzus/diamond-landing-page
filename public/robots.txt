@@ -1,0 +1,12 @@
+# Diamond Landing Page - robots.txt
+# https://diamond.com.br
+
+User-agent: *
+Allow: /
+
+# Block admin and API routes
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://diamond.com.br/sitemap.xml
