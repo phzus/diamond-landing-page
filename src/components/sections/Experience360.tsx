@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { Spade, Ticket, Utensils, Martini } from "lucide-react";
 
 const serviceCards = [
-  { id: 1, title: "POKER ROOM" },
-  { id: 2, title: "ENTRETENIMENTO\nLOTÉRICO\nREGULAMENTADO" },
-  { id: 3, title: "GASTRONOMIA\nPREMIUM" },
-  { id: 4, title: "BAR & MIXOLOGIA" },
+  { id: 1, title: "POKER ROOM", icon: Spade },
+  { id: 2, title: "ENTRETENIMENTO\nLOTÉRICO\nREGULAMENTADO", icon: Ticket },
+  { id: 3, title: "GASTRONOMIA\nPREMIUM", icon: Utensils },
+  { id: 4, title: "BAR & MIXOLOGIA", icon: Martini },
 ];
 
 export function Experience360() {
@@ -52,8 +52,10 @@ export function Experience360() {
                 ${index === 1 ? "mb-[210px] lg:mb-0" : ""}
               `}
             >
-              {/* Ícone (Placeholder Cinza) */}
-              <div className="w-12 h-12 bg-[#D9D9D9] shrink-0" />
+              {/* Ícone */}
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white backdrop-blur-sm transition-colors duration-300 group-hover:bg-white/20">
+                <card.icon className="h-6 w-6" strokeWidth={1.5} />
+              </div>
 
               {/* Título do Serviço */}
               <h3 className="font-helvetica text-lg lg:text-2xl font-normal uppercase tracking-wide text-white whitespace-pre-line leading-tight">
@@ -62,7 +64,6 @@ export function Experience360() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

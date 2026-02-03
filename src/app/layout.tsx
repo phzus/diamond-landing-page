@@ -70,19 +70,9 @@ export const metadata: Metadata = {
   creator: "Diamond Poker Club",
   publisher: "Diamond Poker Club",
   icons: {
-    icon: [
-      {
-        url: "/favicon-light-mode.svg",
-        media: "(prefers-color-scheme: light)",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/favicon-dark-mode.svg",
-        media: "(prefers-color-scheme: dark)",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/favicon-light-mode.svg",
+    icon: "/símbolo.svg",
+    shortcut: "/símbolo.svg",
+    apple: "/símbolo.svg",
   },
   robots: {
     index: true,
