@@ -44,7 +44,7 @@ export function Hero() {
         <div className="absolute inset-0 z-10 backdrop-blur-[2px]" />
       </div>
 
-      <div className="container-diamond relative z-20 flex min-h-screen flex-col items-center justify-center pb-[100px] pt-32 text-center">
+      <div className="container-diamond relative z-20 flex min-h-screen flex-col items-center justify-center pb-[100px] pt-[164px] lg:pt-[180px] text-center">
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

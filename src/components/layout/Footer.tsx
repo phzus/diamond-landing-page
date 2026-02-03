@@ -40,7 +40,7 @@ export function Footer() {
       aria-label="Rodapé do site"
     >
       <div className="container-diamond py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:flex lg:justify-between">
           {/* Brand Column */}
           <div className="space-y-4">
             <Link
@@ -56,7 +56,7 @@ export function Footer() {
                 className="h-8 w-auto"
               />
             </Link>
-            <p className="max-w-xs text-sm text-muted-foreground">
+            <p className="max-w-xs pr-0 lg:pr-10 text-base text-muted-foreground">
               Poker Club com a atmosfera envolvente dos grandes cassinos internacionais.
             </p>
           </div>

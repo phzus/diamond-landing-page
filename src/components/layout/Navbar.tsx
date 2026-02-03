@@ -134,7 +134,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-full max-w-sm border-white/10 bg-black/95 backdrop-blur-xl"
+              className="w-full max-w-xs border-white/10 bg-black/95 backdrop-blur-xl"
             >
               <SheetHeader className="text-left">
                 <SheetTitle className="sr-only">Menu de navegação</SheetTitle>
@@ -185,7 +185,7 @@ export function Navbar() {
                   <Link
                     href="#contato"
                     onClick={() => setIsOpen(false)}
-                    className="inline-flex w-full items-center justify-center rounded-full border border-white/30 bg-transparent px-9 py-4 font-helvetica text-base font-normal text-white transition-all duration-300 hover:border-white hover:bg-white/10"
+                    className="inline-flex items-center justify-center rounded-full border border-white/30 bg-transparent px-9 py-4 font-helvetica text-base font-normal text-white transition-all duration-300 hover:border-white hover:bg-white/10 ml-4"
                   >
                     ENTRAR EM CONTATO
                   </Link>

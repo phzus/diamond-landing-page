@@ -262,4 +262,23 @@
   .linear-transition .swiper-wrapper {
     transition-timing-function: linear !important;
   }
+
+  /* Glassmorphism Card Effect */
+  .glass-card {
+    background: radial-gradient(
+      120.54% 92.13% at 94.63% 93.72%,
+      rgba(65, 65, 65, 0.6) 0%,
+      rgba(32, 32, 32, 0.6) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Garante que o navegador force a renderização do filtro */
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+  }
 }
+
+
+
+
